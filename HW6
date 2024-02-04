@@ -1,0 +1,57 @@
+#1
+n = int(input())
+def delim(x):
+    if x%3 == 0 and x%2 == 1:
+        return True
+    else:
+        return False
+for i in range(n+1):
+  if delim(i): print(i)
+
+#2
+n = int(input())
+for i in range(10, n+1):
+    if i%2 == 0:
+        print(i)
+
+#3
+n = int(input())
+a = []
+if n%2 == 0:
+   for i in range(1,n+1):
+       if i%2 == 0:
+           a.append(i)
+   print(len(a))
+else:
+    for i in range(1,n+1):
+        if i%2 == 1:
+            a.append(i)
+    print(sum(a))
+
+#4
+n = int(input())
+if n%3 == 0:
+    m = int(input())
+    arrm = [m]
+    for i in range(2, n):
+        if m*i > n:
+            break
+        else:
+            arrm.append(m*i)
+    print(len(arrm))
+else:
+    for i in range(1, n+1):
+       print(n**i, sep = ' ')
+
+#5
+import math
+a = int(input())
+b = int(input())
+n = int(input())
+counter = 0
+gip = math.sqrt(a**2 + b**2)
+print(gip)
+for i in range(0, n):
+    m = int(input())
+    if m == gip: counter += 1
+print(counter)
