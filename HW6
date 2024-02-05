@@ -1,0 +1,42 @@
+#1
+n = int(input())
+m = int(input())
+arr = []
+arr.append(n)
+arr.append(m)
+print(sum(arr))
+
+№2
+n = str(input())
+arr = []
+word = ''
+
+for i in n:
+    if i != ' ':
+        word += str(i)
+    else:
+        arr.append(word)
+        word = ''
+arr.append(word)
+print(arr[0], arr[len(arr)-1])
+
+#3
+n = str(input())
+arr = []
+word = ''
+
+for i in n:
+    if i != ' ':
+        word += str(i)
+    else:
+        arr.append(word)
+        word = ''
+arr.append(word)
+maxim = -2
+maxword = ''
+for i in arr:
+    n = len(i)
+    if n > maxim: 
+        maxword = i
+        maxim = n
+print(maxword)
