@@ -1,0 +1,6 @@
+#1
+
+def list_in_dict(arr):
+    return {i:i for i in arr}
+
+print(list_in_dict([int(x) for x in (input()+' ').split()]))
