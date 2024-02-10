@@ -60,3 +60,18 @@ def is_palindrom(x):
         return False
         
 print(is_palindrom(int(input())))
+
+#5
+
+def is_simple(x):
+    num_del = 2
+    if x == 2: return True
+    for i in range(2, x//2+2):
+        if num_del > 2:
+            return False
+        if x%i == 0:
+            num_del += 1
+    if num_del == 2:
+        return True
+
+print(is_simple(int(input())))
