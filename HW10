@@ -4,3 +4,11 @@ def list_in_dict(arr):
     return {i:i for i in arr}
 
 print(list_in_dict([int(x) for x in (input()+' ').split()]))
+
+#2
+
+def sq_dict(n):
+    arr = [x for x in range(1, n+1)]
+    return {i:i**2 for i in arr}
+
+print(sq_dict(int(input())))
