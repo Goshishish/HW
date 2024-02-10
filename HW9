@@ -1,1 +1,8 @@
+#1
 
+def (arr):
+    summ = 0
+    for i in arr:
+        summ += i 
+    return summ
+print(summing([int(x) for x in input().split()]))
