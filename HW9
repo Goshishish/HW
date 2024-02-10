@@ -6,3 +6,27 @@ def (arr):
         summ += i 
     return summ
 print(summing([int(x) for x in input().split()]))
+
+#2
+
+def is_in_range(x, rangeab):
+    if rangeab[0] == '[':
+        a_include = True
+    else:
+        a_include = False
+    if rangeab[len(rangeab)] == ']':
+        b_include = True
+    else:
+        b_include = False
+    
+    a, b = map(rangeab.split(', '))
+    
+    if (x == a and a_include) or (x == b and b_include):
+        return True
+    else:
+        if x > a and x < b:
+            return True
+        else:
+            return False
+
+print(summing([int(x) for x in input().split()]))
