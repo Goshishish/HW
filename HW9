@@ -14,12 +14,15 @@ def is_in_range(x, rangeab):
         a_include = True
     else:
         a_include = False
-    if rangeab[len(rangeab)] == ']':
+    if rangeab[len(rangeab)-1] == ']':
         b_include = True
     else:
         b_include = False
     
-    a, b = map(rangeab.split(', '))
+    rangeab = rangeab[1: len(rangeab)-1]
+    a, b = map(int, list(rangeab.split(', ')))
+    a = int(a)
+    b = int(b)
     
     if (x == a and a_include) or (x == b and b_include):
         return True
@@ -29,4 +32,4 @@ def is_in_range(x, rangeab):
         else:
             return False
 
-print(summing([int(x) for x in input().split()]))
+print(is_in_range(int(input('Введите число')), input('Введите промежуток')))
