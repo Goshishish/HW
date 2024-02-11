@@ -12,3 +12,21 @@ def sq_dict(n):
     return {i:i**2 for i in arr}
 
 print(sq_dict(int(input())))
+
+#3
+def pr_dict(dic):
+    pr = 1
+    for i in dic:
+        pr = pr * dic[i]
+    return pr
+
+a = input()
+a = a[1: len(a)-1]
+a = a.split(', ')
+dic = {}
+for i in a:
+    key, num = i.split(' : ')
+    num = int(num)
+    dic[key] = num
+
+print(pr_dict(dic))
