@@ -30,3 +30,10 @@ for i in a:
     dic[key] = num
 
 print(pr_dict(dic))
+
+#4
+
+def count_punct(text):
+    return text.count('.') + text.count(',') + text.count(';') + text.count(':') + text.count('!') + text.count('?')
+
+print(count_punct(input()))
